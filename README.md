@@ -1,23 +1,23 @@
-# node-path-map
+# node-paths
 
-[![Build Status](https://travis-ci.org/tnRaro/node-path-map.svg)](https://travis-ci.org/tnRaro/node-path-map)
+[![Build Status](https://travis-ci.org/tnRaro/node-paths.svg)](https://travis-ci.org/tnRaro/node-paths)
 
-path map
+paths
 
 # Installation
 
-	$ npm install path-map --save
+	$ npm install paths --save
 
 # Usage
 
 ```js
-var pathMap = require('path-map');
+var paths = require('paths');
 
-pathMap({
+paths({
 	cwd: __dirname,
 	src: 'src',
 	dist: 'dist'
 });
 
-pathMap('src'); // __dirname + '/src'
+paths('src'); // __dirname + '/src'
 ```

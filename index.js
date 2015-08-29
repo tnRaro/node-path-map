@@ -1,10 +1,10 @@
-var PathMap = require('./src/path-map');
+var Paths = require('./src/paths');
 
 var instance;
 
 module.exports = function(arg){
 	if(!instance)
-		instance = new PathMap();
+		instance = new Paths();
 	
 	switch(typeof arg){
 		case 'object':

@@ -1,14 +1,14 @@
 var path = require('path');
 
-function PathMap(config){
+function Paths(config){
 	this._map = {};
 	this._cwd = process.cwd();
-	
+
 	if(config)
 		this.config(config);
 }
 
-PathMap.prototype.config = function(config){
+Paths.prototype.config = function(config){
 	for(var key in config){
 		(function(value){
 			switch(key){
@@ -22,17 +22,17 @@ PathMap.prototype.config = function(config){
 	}
 }
 
-PathMap.prototype.add = function(name, path){
+Paths.prototype.add = function(name, path){
 	return this._map[name] = path;
 }
 
-PathMap.prototype.cwd = function(name){
+Paths.prototype.cwd = function(name){
 	return this._cwd = name || process.cwd();
 }
 
-PathMap.prototype.get = function(name, fallback){
+Paths.prototype.get = function(name, fallback){
 	var ref = this._map[name];
-	
+
 	if(typeof ref !== 'undefined'){
 		return path.join(this._cwd, ref);
 	} else {
@@ -44,4 +44,4 @@ PathMap.prototype.get = function(name, fallback){
 	}
 }
 
-module.exports = PathMap;
+module.exports = Paths;
