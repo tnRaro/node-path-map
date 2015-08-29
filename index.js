@@ -1,10 +1,10 @@
-var Paths = require('./src/paths');
+var PathPack = require('./src/path-pack');
 
 var instance;
 
 module.exports = function(arg){
 	if(!instance)
-		instance = new Paths();
+		instance = new PathPack();
 	
 	switch(typeof arg){
 		case 'object':

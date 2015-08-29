@@ -1,23 +1,23 @@
-# node-paths
+# node-path-pack
 
-[![Build Status](https://travis-ci.org/tnRaro/node-paths.svg)](https://travis-ci.org/tnRaro/node-paths)
+[![Build Status](https://travis-ci.org/tnRaro/node-path-pack.svg)](https://travis-ci.org/tnRaro/node-path-pack)
 
-paths
+pathPack
 
 # Installation
 
-	$ npm install paths --save
+	$ npm install path-pack --save
 
 # Usage
 
 ```js
-var paths = require('paths');
+var pathPack = require('path-pack');
 
-paths({
+pathPack({
 	cwd: __dirname,
 	src: 'src',
 	dist: 'dist'
 });
 
-paths('src'); // __dirname + '/src'
+pathPack('src'); // __dirname + '/src'
 ```

@@ -1,41 +1,41 @@
 var assert = require('assert');
 
-var Paths = require('../src/paths');
+var PathPack = require('../src/path-pack');
 
-describe('Paths', function(){
-	var paths = new Paths();
+describe('PathPack', function(){
+	var pathPack = new PathPack();
 
 	describe('#cwd()', function(){
 		it('should set without error', function(){
-			paths.cwd(__dirname);
+			pathPack.cwd(__dirname);
 
-			assert.equal(__dirname, paths._cwd);
+			assert.equal(__dirname, pathPack._cwd);
 		});
 	});
 	describe('#add()', function(){
 		it('should add without error', function(){
-			path = paths.add('src', 'src');
+			path = pathPack.add('src', 'src');
 
 			assert.equal('src', path);
-			assert.equal('src', paths._map.src);
+			assert.equal('src', pathPack._map.src);
 		});
 	});
 	describe('#config()', function(){
 		it('should map without error', function(){
-			assert.equal(__dirname, paths._cwd);
-			assert.equal('src', paths._map.src);
+			assert.equal(__dirname, pathPack._cwd);
+			assert.equal('src', pathPack._map.src);
 		})
 	});
 	describe('#get()', function(){
 		it('should return path', function(){
-			assert.equal(paths._cwd + '/src', paths.get('src'));
+			assert.equal(pathPack._cwd + '/src', pathPack.get('src'));
 		});
 		it('should return fallback', function(){
-			assert.equal('fallback', paths.get('unknown', 'fallback'));
+			assert.equal('fallback', pathPack.get('unknown', 'fallback'));
 		});
 		it('should throw error', function(){
 			assert.throws(function(){
-				paths.get('unknown')
+				pathPack.get('unknown')
 			}, Error, 'Access of undefined path unknown.');
 		});
 	});
