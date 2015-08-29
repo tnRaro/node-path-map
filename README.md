@@ -4,7 +4,11 @@
 
 path map
 
-$ Usage
+# Installation
+
+	$ npm install path-map --save
+
+# Usage
 
 ```js
 var pathMap = require('path-map');
