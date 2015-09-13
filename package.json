@@ -1,6 +1,6 @@
 {
   "name": "path-pack",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "path-pack",
   "main": "index.js",
   "scripts": {
