@@ -44,4 +44,10 @@ PathPack.prototype.get = function(name, fallback){
 	}
 }
 
+PathPack.prototype.join = function(){
+	var args = Array.prototype.slice.call(arguments);
+	args.unshift(this._cwd);
+	return path.join.apply(path, args);
+}
+
 module.exports = PathPack;

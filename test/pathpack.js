@@ -39,4 +39,14 @@ describe('PathPack', function(){
 			}, Error, 'Access of undefined path unknown.');
 		});
 	});
+	describe('#join()', function(){
+		it('should join', function(){
+			assert.equal(pathPack._cwd + '/foo/bar/baz/asdf', pathPack.join('/foo', 'bar', 'baz/asdf', 'quux', '..'));
+		});
+		it('should throw error', function(){
+			assert.throws(function(){
+				pathPack.join('foo', {}, 'bar')
+			}, TypeError, 'Arguments to path.join must be strings');
+		});
+	});
 });

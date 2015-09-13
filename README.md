@@ -21,3 +21,27 @@ pathPack({
 
 pathPack('src'); // __dirname + '/src'
 ```
+
+# API
+
+## Methods
+
+### config(configuration)
+
+..
+
+### add(name, path)
+
+..
+
+### cwd(name)
+
+..
+
+### get(name, fallback)
+
+..
+
+### join(path)
+
+..
